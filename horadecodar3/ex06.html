@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>exercicio 6
+        Escreva um programa para ler 2 notas de um aluno, calcular e imprimir a média final.
+         Considere que a nota de aprovação é 9,5. Logo após escrever a mensagem "Calcular a média de outro aluno Sim/Não?"
+         e solicitar um resposta. Se a resposta for "S", o programa deve ser executado novamente, caso contrário deve ser 
+        encerrado exibindo a quantidade de alunos aprovados.</p>
+    <script>
+        //exercicio 6
+        //Escreva um programa para ler 2 notas de um aluno, calcular e imprimir a média final.
+        // Considere que a nota de aprovação é 9,5. Logo após escrever a mensagem "Calcular a média de outro aluno Sim/Não?"
+        // e solicitar um resposta. Se a resposta for "S", o programa deve ser executado novamente, caso contrário deve ser 
+        //encerrado exibindo a quantidade de alunos aprovados.
+
+        let alunosAprovados = 0;
+
+        let numAlunos = parseInt(prompt("Digite o número de alunos: "));
+
+        for(let i =0; i < numAlunos; i++){
+            let n1 = parseFloat(prompt('Digite a primeira nota : '))
+            let n2 = parseFloat(prompt('Digite a segunda nota : '))
+
+            let media = (n1 + n2)/2;
+            let resultado = media >= 9.5 ? "Aprovado" : "Reprovado";
+
+            console.log(`Nota 1: ${n1}`);
+            console.log(`Nota 2: ${n2}`);
+            console.log(`Média: ${media}`);
+            console.log(`Resultado: ${resultado}`);
+            
+            if (media >= 9.5) {
+            alunosAprovados++;
+            }
+        }
+
+        console.log(`Número de alunos aprovados: ${alunosAprovados}`);
+    </script>
+
+    
+</body>
+</html>

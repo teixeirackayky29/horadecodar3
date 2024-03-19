@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p>Escreva um algoritmo para ler 2 valores informados pelo usuário e se o segundo valor informado for igual ou menor que ZERO, deve ser lido um novo valor. Ou seja, para o segundo valor não pode ser aceito o valor zero, nem um valor negativo.  O seu programa deve imprimir o resultado da divisão do primeiro valor lido pelo segundo valor.</p>
+    <Script>
+
+        let valor1, valor2;
+
+     
+        while (isNaN(valor1)) {
+            valor1 = parseFloat(prompt("Digite um número:"));
+            if (isNaN(valor1)) {
+                console.error("Valor inválido. Digite um número: ");
+            }
+        }
+
+        
+        while (isNaN(valor2) || valor2 <= 0) {
+            valor2 = parseFloat(prompt("Digite um número positivo para o divisor:"));
+            if (isNaN(valor2)) {
+                console.error("Valor inválido. Digite um número: ");
+            } else if (valor2 <= 0) {
+                console.error("O divisor precisa ser positivo.");
+            }
+        }
+
+       
+        let resultado = valor1 / valor2;
+
+        
+        console.log(`O resultado da divisão é: ${resultado}`);
+
+    </Script>
+</body>
+
+</html>
